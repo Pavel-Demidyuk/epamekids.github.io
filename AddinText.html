@@ -9,10 +9,17 @@
 <body>
   <script>
     function Text() {
-      button.innerHTML="Загружаю...";
+      # button.innerHTML="Загружаю...";
+      
+      # hide button      
+      # show spinner
       $.get("https://epamekids.github.io/README.md", function(data){
+        # hide spinner
+        # show button
         $("gghkll").appendTo('#main');
-        setTimeout('button.innerHTML="Add text"', 2000);
+        
+        
+        #setTimeout('button.innerHTML="Add text"', 2000);
       });
     }
 
@@ -20,6 +27,8 @@
 <div id='main'>
   <p id='m.text'>Text will be added here</p>
 </div>
+  
+<img src="spinner.gif" style="display:none;">
 <div id="text">
   <button onclick="Text()" id="button">Add text</button>
 </div>
